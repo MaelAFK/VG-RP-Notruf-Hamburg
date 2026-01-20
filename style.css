@@ -163,3 +163,98 @@ header {
     background-color: black;
   }
 }
+
+/* Chat-Button fixiert unten rechts */
+  #chatBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2c7be5;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
+  }
+  #chatBtn:hover { transform: scale(1.1); }
+
+  /* Chatbox */
+  #chatBox {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 350px;
+    height: 450px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    display: none;
+    flex-direction: column;
+    z-index: 9999;
+  }
+
+  #chatHeader {
+    background: #2c7be5;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #closeBtn { cursor: pointer; }
+
+  #messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+  }
+
+  /* Kategorie-Buttons */
+  #chatButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 5px 10px;
+    justify-content: space-between;
+  }
+  #chatButtons button.chatCat {
+    flex: 1 1 48%;
+    padding: 6px;
+    background: #2c7be5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  #chatButtons button.chatCat:hover { transform: scale(1.05); opacity: 0.9; }
+
+  /* Eingabebereich */
+  #inputArea {
+    display: flex;
+    border-top: 1px solid #ccc;
+  }
+  #msgInput {
+    flex: 1;
+    padding: 10px;
+    border: none;
+  }
+  #sendBtn {
+    padding: 10px 15px;
+    border: none;
+    background: #2c7be5;
+    color: white;
+    cursor: pointer;
+  }
+
+  .user { text-align: right; color: #2c7be5; margin: 5px 0; }
+  .bot { text-align: left; color: #333; margin: 5px 0; }
